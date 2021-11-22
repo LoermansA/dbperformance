@@ -1,0 +1,11 @@
+version: '2'
+services:
+  dbperformance-postgresql:
+    image: 'postgres:13.1-alpine'
+    volumes:
+      - ~/volumes/postgresql/dbperformance:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=dbperformance
+      - POSTGRES_PASSWORD=dbperformance
+    ports:
+      - 5432:5432
